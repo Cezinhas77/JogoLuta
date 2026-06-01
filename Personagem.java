@@ -4,11 +4,10 @@ public class Personagem {
     String nome;
     int vida, socoHP, chuteHP,especialHP;
 
-    public Personagem(){
-        Scanner ent = new Scanner(System.in);
+    public Personagem(Scanner ent){
 
         System.out.print("Digite o nome do personagem: ");
-        this.nome = ent.nextLine();
+        this.nome = ent.next();
         System.out.print("Digite a vida do personagem: ");
         this.vida = ent.nextInt();
         System.out.print("Digite o dano do soco: ");
@@ -17,8 +16,7 @@ public class Personagem {
         this.chuteHP = ent.nextInt();
         System.out.print("Digite o dano do especial: ");
         this.especialHP = ent.nextInt();
-
-
+        ent.nextLine();
 
         exibirInformacao();
 
